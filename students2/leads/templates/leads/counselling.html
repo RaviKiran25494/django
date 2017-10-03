@@ -1,0 +1,51 @@
+{% extends 'leads/test.html' %}
+
+
+{% block body %}
+
+
+
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+   
+    <center><h1>Counselling</h1></center></div>
+<div class="container">
+  	<div class="row">
+  		<div class="col-md-8 col-md-offset-2 col-md-offset-right-2">
+		<form  action="counselling1" method="POST">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="Demo Date">Demo Date:</label>
+				<input type="date" name='demo_date'  placeholder="Enter Demo Date" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Course">Course:</label>
+				<select name='course' class="form-control" value="Default">
+				  <option value="Default1">Default</option>
+				{% for courses in all_courses %}
+					 <option value="{{courses.course}}">{{courses.course}}</option>
+				{% endfor %}
+				</select>
+				
+			</div>
+			
+			
+			<div class="button-group" style="text-align: center;">
+				<button type="submit" class="btn btn-sm btn-success">Find </button> 
+			</div>			
+		</form>
+		</div>
+	</div>
+ </div>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+{% endblock %}

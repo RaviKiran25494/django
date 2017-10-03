@@ -1,0 +1,15 @@
+{% extends 'leads/test.html' %}
+
+
+{% block body %}
+	{% if register %}
+
+		<ul>
+			{% for registers in register %}
+				<li><a href="/leads/{{ registers.id }}/">{{ registers.st_name }}</a></li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<h3>you don't have any albums</h3>
+	{% endif %}
+{% endblock %}

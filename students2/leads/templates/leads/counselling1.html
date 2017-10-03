@@ -1,0 +1,70 @@
+{% extends 'leads/test.html' %}
+
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+<style>
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width:10px;
+}
+</style>
+    <center><h1>Counselling</h1></center></div>
+<center>
+<table style="width:70%">
+  <tr>
+    <th><center>ID</center></th>
+    <th><center>NAME</center></th>
+    <th><center>Mobile</center></th>
+    <th><center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></th>
+    <th><center>Course</center></th>
+    <th><center>Sourse</center></th>
+    <th><center>LeadStatus</center></th>
+    <th><center>&nbsp;&nbsp;&nbsp;Demodate&nbsp;&nbsp;&nbsp;</center></th>
+    <th><center>Counsler</center></th>
+    <th><center>remarks</center></th>
+    <th><center>JOIN</center></th>
+    <th><center>WILLING</center></th>
+    <th><center>DEAD</center></th>
+</tr>
+	{% if all_registers %}
+      
+			{% for registers in all_registers %}
+        {% if registers.st_demo_date ==   demo_date  %}
+          {% if registers.st_course ==   course  %}
+    				<tr><td><center>{{registers.id}}</center></td>
+    			    <td><center>{{registers.st_name}}</center></td>
+    			    <td><center>{{registers.st_mobile}}</center></td>
+    			    <td><center>{{registers.st_email}}</center></td>
+    			    <td><center>{{registers.st_course}}</center></td>
+    			    <td><center>{{registers.st_sourse}}</center></td>
+    			    <td><center>{{registers.st_lead_status}}</center></td>
+    			    <td><center>{{registers.st_demo_date}}</center></td>
+    			    <td><center>{{registers.st_counsler}}</center></td>
+    			    <td><center>{{registers.st_remarks}}</center></td>
+              <th><center><button><a class="btn btn-success" href='/joinings/join1'>JOIN</a></button></center></th>
+              <th><center><button><a class="btn btn-warning" href='counselling1/edit/{{ registers.id }}'>WILLING</a></button></center></th>
+              <th><center><button><a class="btn btn-danger" href='counselling1/delete1/{{ registers.id }}'>DEAD</a></button></center></th>
+    			 </tr>
+           {% endif %}
+        {% endif %}
+			{% endfor %}
+			</table></center><br><br>
+	{% else %}
+		<h3>you don't have any registers</h3>
+	{% endif %}
+{% endblock %}
+
+<br><br>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>

@@ -1,0 +1,50 @@
+{% extends 'leads/test.html' %}
+
+
+{% block body %}
+
+
+
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+   
+    <center><h1>Callings</h1></center></div>
+<div class="container">
+  	<div class="row">
+  		<div class="col-md-8 col-md-offset-2 col-md-offset-right-2">
+		<form  action="callings1" method="POST">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="Lead Status">Demo-call:</label>
+				<select name='demo_call' class="form-control" value="Default">
+				  <option value="Default1">Default</option>
+				  <option value="Demo">Demo</option>
+				  <option value="Callback">Callback</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="Demo Date">Demo Date:</label>
+				<input type="date" name='demo_date'  placeholder="Enter Demo Date" class="form-control">
+				
+			</div>
+			
+			
+			<div class="button-group" style="text-align: center;">
+				<button type="submit" class="btn btn-sm btn-success">Find </button> 
+			</div>			
+		</form>
+		</div>
+	</div>
+ </div>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+{% endblock %}

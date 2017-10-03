@@ -1,0 +1,58 @@
+{% extends 'leads/test.html' %}
+
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+<style>
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width:10px;
+}
+</style>
+    <center><h1>Current-Students</h1></center></div>
+<center>
+{{all_joinings.Status}}="complected"
+Joinings.save()
+<table style="width:70%">
+  <tr>
+    <tr>
+    <th><center>ID</center></th>
+    <th><center>COURSE</center></th>
+    <th><center>NAME</center></th>
+    
+    <th><center>COMPLETION</center></th>
+    <th><center>DATA OF JIONING</center></th>
+    
+    <th><center>INSTRUCTOR</center></th>
+    
+    <th><center>Mobile</center></th>
+    <th><center>Email</center></th>
+    <th><center>Status</center></th>
+  </tr>  
+  <tr>
+    <td><center>{{all_joinings.id}}</center></td>
+    <td><center>{{all_joinings.course}}</center></td>
+    <td><center>{{all_joinings.name}}</center></td>
+    <td><center>{{all_joinings.complection_date}}</center></td>
+    <td><center>{{all_joinings.date_join}}</center></td>
+    <td><center>{{all_joinings.instructor}}</center></td>
+    <td><center>{{all_joinings.mobile}}</center></td>
+    <td><center>{{all_joinings.email}}</center></td>
+    <th><center>{{all_joinings.Status}}</center></th>
+    </tr>
+      </table></center><br><br>
+{% endblock %}
+
+<br><br>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
