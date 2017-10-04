@@ -33,6 +33,7 @@ table, th, td {
     
     <th><center>Mobile</center></th>
     <th><center>Email</center></th>
+    <th><center>Status</center></th>
     <th><center>complete</center></th>
     <th><center>Delay</center></th>
     <th><center>DEAD</center></th>
@@ -49,6 +50,8 @@ table, th, td {
           <td><center>{{joinings.instructor}}</center></td>
           <td><center>{{joinings.mobile}}</center></td>
           <td><center>{{joinings.email}}</center></td>
+          <td><center>{{joinings.Status}}</center></td>
+
           <th><center><button><a class="btn btn-success" href="comp1/{{ joinings.id }}" class="glyphicon glyphicon-edit">Complete</a></button></center></th>
           <th><center><button><a class="btn btn-warning" href="edit/{{ joinings.id }}" class="glyphicon glyphicon-edit">Delay</a></button></center></th><th><center><button><a class="btn btn-danger" href="delete/{{ joinings.id }}" class="glyphicon glyphicon-trash">Discontinue</a></button></center></th></tr>
 			{% endfor %}

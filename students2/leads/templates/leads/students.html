@@ -1,0 +1,111 @@
+{% extends 'leads/test.html' %}
+
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+<style>
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width:10px;
+}
+</style>
+    <center><h1>Comlected-Students</h1></center></div>
+<center>
+<table style="width:70%">
+  <tr>
+    <tr>
+    <th><center>ID</center></th>
+    <th><center>COURSE</center></th>
+    <th><center>NAME</center></th>
+    
+    <th><center>COMPLETION</center></th>
+    <th><center>DATA OF JIONING</center></th>
+    
+    <th><center>INSTRUCTOR</center></th>
+    
+    <th><center>Mobile</center></th>
+    <th><center>Email</center></th>
+    <th><center>Status</center></th>
+    
+  </tr>  
+
+    {% if joinings %}
+
+            {% for joinings in joinings %}
+              {% if joinings.Status == 'complected' %}
+                  <tr><td><center>{{joinings.id}}</center></td>
+                  <td><center>{{joinings.course}}</center></td>
+                  <td><center>{{joinings.name}}</center></td>
+                  <td><center>{{joinings.complection_date}}</center></td>
+                  <td><center>{{joinings.date_join}}</center></td>
+                  <td><center>{{joinings.instructor}}</center></td>
+                  <td><center>{{joinings.mobile}}</center></td>
+                  <td><center>{{joinings.email}}</center></td>
+                  <th><center>{{joinings.Status}}</center></th>
+                  </tr>
+              
+              {% endif %}
+            {% endfor %}
+            </table></center><br><br>
+    {% else %}
+        <h3>you don't have any joinings</h3>
+    {% endif %}
+
+
+<br><br>
+
+
+<center><h1>Students-Discontinue</h1></center>
+<center>
+<table style="width:70%">
+  <tr>
+    <tr>
+    <th><center>ID</center></th>
+    <th><center>COURSE</center></th>
+    <th><center>NAME</center></th>
+    
+    <th><center>COMPLETION</center></th>
+    <th><center>DATA OF JIONING</center></th>
+    
+    <th><center>INSTRUCTOR</center></th>
+    
+    <th><center>Mobile</center></th>
+    <th><center>Email</center></th>
+    <th><center>Status</center></th>
+    <th><center>Rejoin</center></th>
+    
+  </tr>  
+
+    {% if joinings %}
+
+            {% for joinings in joinings %}
+              {% if joinings.Status == 'Discontinue' %}
+                  <tr><td><center>{{joinings.id}}</center></td>
+                  <td><center>{{joinings.course}}</center></td>
+                  <td><center>{{joinings.name}}</center></td>
+                  <td><center>{{joinings.complection_date}}</center></td>
+                  <td><center>{{joinings.date_join}}</center></td>
+                  <td><center>{{joinings.instructor}}</center></td>
+                  <td><center>{{joinings.mobile}}</center></td>
+                  <td><center>{{joinings.email}}</center></td>
+                  <th><center>{{joinings.Status}}</center></th>
+                  <th><center><button><a class="btn btn-success" href="/leads" class="glyphicon glyphicon-edit">Rejoin</a></button></center></th>
+                  </tr>
+              {% endif %}
+            {% endfor %}
+            </table></center><br><br>
+    {% endif %}
+{% endblock %}
+</div></div>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>

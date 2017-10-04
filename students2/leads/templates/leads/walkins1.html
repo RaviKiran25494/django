@@ -17,7 +17,7 @@ table, th, td {
     width:10px;
 }
 </style>
-    <center><h1>Counselling</h1></center></div>
+    <center><h1>Callings</h1></center></div>
 <center>
 <table style="width:70%">
   <tr>
@@ -31,15 +31,12 @@ table, th, td {
     <th><center>&nbsp;&nbsp;&nbsp;Demodate&nbsp;&nbsp;&nbsp;</center></th>
     <th><center>Counsler</center></th>
     <th><center>remarks</center></th>
-    <th><center>JOIN</center></th>
-    <th><center>WILLING</center></th>
-    <th><center>DEAD</center></th>
 </tr>
 	{% if all_registers %}
       
 			{% for registers in all_registers %}
         {% if registers.st_demo_date ==   demo_date  %}
-          {% if registers.st_course ==   course  %}
+          {% if registers.st_lead_status ==   demo_call  %}
     				<tr><td><center>{{registers.id}}</center></td>
     			    <td><center>{{registers.st_name}}</center></td>
     			    <td><center>{{registers.st_mobile}}</center></td>
@@ -50,11 +47,9 @@ table, th, td {
     			    <td><center>{{registers.st_demo_date}}</center></td>
     			    <td><center>{{registers.st_counsler}}</center></td>
     			    <td><center>{{registers.st_remarks}}</center></td>
-              <th><center><button><a class="btn btn-success" href='/joinings/join1'>JOIN</a></button></center></th>
-              <th><center><button><a class="btn btn-warning" href='/leads'>WILLING</a></button></center></th>
-              <th><center><button><a class="btn btn-danger" href='/leads'>DEAD</a></button></center></th>
+              
     			 </tr>
-           {% endif %}
+          {% endif %}
         {% endif %}
 			{% endfor %}
 			</table></center><br><br>

@@ -1,0 +1,44 @@
+{% extends 'leads/test.html' %}
+
+
+{% block body %}
+
+
+
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+   
+    <center><h1>Rejoin</h1></center></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-md-offset-right-2">
+    <form method="POST" action="updatere/{{ joining.id }}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" value="{{ joining.name  }}" required="required" class="form-control" />
+        </div>
+        <div class="form-group">
+                <label for="willing_date">Rejoin_date:</label>
+                <input type="text" name='date_join'  placeholder="Enter willing_date" value="{{ joining.date_join }}" class="form-control">
+            </div>
+        
+        <div class="form-group">
+            <center><button type="submit" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-edit"></span> Rejoin</button></center>
+        </div>
+    </form>
+</div>
+    </div>
+ </div>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+{% endblock %}
