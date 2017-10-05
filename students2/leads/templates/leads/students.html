@@ -97,7 +97,7 @@ table, th, td {
                   <td><center>{{joinings.mobile}}</center></td>
                   <td><center>{{joinings.email}}</center></td>
                   <th><center>{{joinings.Status}}</center></th>
-                  <th><center><button><a class="btn btn-success" href="/leads" class="glyphicon glyphicon-edit">Rejoin</a></button></center></th>
+                  <th><center><button><a class="btn btn-success" href="rejoin/{{ joinings.id }}" class="glyphicon glyphicon-edit">Rejoin</a></button></center></th>
                   </tr>
               {% endif %}
             {% endfor %}

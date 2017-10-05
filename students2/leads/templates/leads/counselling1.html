@@ -50,14 +50,17 @@ table, th, td {
     			    <td><center>{{registers.st_demo_date}}</center></td>
     			    <td><center>{{registers.st_counsler}}</center></td>
     			    <td><center>{{registers.st_remarks}}</center></td>
-              <th><center><button><a class="btn btn-success" href='/leads'>JOIN</a></button></center></th>
-              <th><center><button><a class="btn btn-warning" href='/leads'>WILLING</a></button></center></th>
-              <th><center><button><a class="btn btn-danger" href='/leads'>DEAD</a></button></center></th>
+              <th><center><button><a class="btn btn-success" href='/joinings/join1'>JOIN</a></button></center></th>
+              <th><center><button><a class="btn btn-warning" href='counselling1/edit/{{ registers.id }}'>WILLING</a></button></center></th>
+              <th><center><button><a class="btn btn-danger" href='counselling1/delete1/{{ registers.id }}'>DEAD</a></button></center></th>
     			 </tr>
            {% endif %}
         {% endif %}
 			{% endfor %}
 			</table></center><br><br>
+
+      <div class="container-fluid"style="float: left;"><button><a class="btn btn-success" href='/counselling/coun1' >Back</a></button></div>
+          <div class="container-fluid" style="float: right;"><button><a class="btn btn-success" href='/current/curr1' >Nxet</a></button></div>
 	{% else %}
 		<h3>you don't have any registers</h3>
 	{% endif %}
