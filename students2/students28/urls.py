@@ -13,7 +13,5 @@ urlpatterns = [
     url(r'^counselling/', include('leads.urls')),
     url(r'^complect/', include('leads.urls')),
     url(r'^students/', include('leads.urls')),
-    
-
 
 ]

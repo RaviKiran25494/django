@@ -145,7 +145,7 @@ def index(request):
     return render(request, 'leads/index11.html', context)
 
 def create(request):
-    registers = Registers(st_name=request.POST['name'],st_mobile=request.POST['mobile'],st_email=request.POST['email'],st_course=request.POST['course'],st_sourse=request.POST['source'],st_lead_status=request.POST['lead'],st_demo_date=request.POST['demo_date'],st_counsler=request.POST['counsler'],st_remarks=request.POST['remarks'])
+    registers = Registers(st_name=request.POST['name'],st_mobile=request.POST['mobile'],st_email=request.POST['email'],st_course=request.POST['course'],st_sourse=request.POST['source'],st_lead_status=request.POST['demo_call'],st_demo_date=request.POST['demo_date'],st_counsler=request.POST['counsler'],st_remarks=request.POST['remarks'])
     registers.save()
     return redirect('/leads')
 
